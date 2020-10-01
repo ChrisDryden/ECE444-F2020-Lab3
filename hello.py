@@ -41,7 +41,8 @@ def index():
             flash('Please enter a UofT email!')
             return redirect(url_for('index'))
         session['name'] = form.name.data
+        session['email'] = form.email.data
         return redirect(url_for('index'))
-    return render_template('index.html', form=form, name=session.get('name'))
+    return render_template('index.html', form=form, name=session.get('name'), email=session.get('email'))
 
 app.run()
