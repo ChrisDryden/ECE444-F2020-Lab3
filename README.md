@@ -1,21 +1,17 @@
 # ECE444-F2020-Lab3
 
 
-Chris Dryden Lab 3
+Chris Dryden Lab 4
 
-This repo is a clone of
-https://github.com/miguelgrinberg/flasky
+Explanation of how to start the system:
+To start the docker container, you must first build the image using the command: docker build -t NAME   . Then you can run the docker container using the command: $ docker run -d -p 5000:5000 NAME    . The two ports that are listed in the command are the port that you are trying to connect to and the port that it will show up as on your own machine. The configuration of the docker container is in the file Dockerfile in the root of this project directory.
 
+Screenshots:
+![Build](pics/build.png)
+![Run](pics/run.png)
+![Images](pics/images.png)
+![Site](pics/site.png)
+![Docker Image Logs](pics/logs.png)
 
-Activity 1: ![Datetime Display](pics/activity1.png)
-  
-  
-
-Activity 2:
-![Initial Page](pics/activity2a.png)
-![Valid Inputs](pics/activity2b.png)
-![Invalid Email](pics/activity2c.png)
-![Non-UofT Email](pics/activity2d.png)
-
-Activity 3:
-The main difference is that the sql database is a table based database with relations between different keys whereas nosql databases are key documents relational. A practical example of this is that you can query by a secondary index quicklier and perform more complex secondary queries on a sql database however it will require scanning the whole database to scan for an secondary index condition. Nosql is vertically scalable whereas the sql database is horizontally scalable.
+Difference Between Virtual Machine and Docker:
+Docker allows you to programmatically defined your operating system and it creates quickly downloadable images that can be used to create docker containers. Virtual machines are running a seperate operating system that is virtualized on your own system. Virtual machines are more used for running programs that require a specific os, and are often not not configured to run on demand whereas docker images are shareable and docker containers are spun up and down very often to run programs.
